@@ -5,9 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	"github.com/yourusername/bookstore-api-gateway/config"
-	"github.com/yourusername/bookstore-api-gateway/handlers"
-	"github.com/yourusername/bookstore-api-gateway/middleware"
+	"github.com/nvrbckdown/bookstore-api-gateway/config"
+	"github.com/nvrbckdown/bookstore-api-gateway/handlers"
 )
 
 func main() {
@@ -28,7 +27,6 @@ func main() {
 	// Apply middleware
 	router.Use(gin.Recovery())
 	router.Use(middleware.Logger())
-	router.Use(middleware.CORS(cfg.AllowedOrigins))
 
 	// Register routes
 	registerRoutes(router, cfg)
