@@ -20,7 +20,7 @@ func LoadConfig() *Config {
 		GinMode:             getEnv("GIN_MODE", "debug"),
 		BookstoreServiceURL: getEnv("BOOKSTORE_SERVICE_URL", "http://localhost:5000"),
 		OrderServiceURL:     getEnv("ORDER_SERVICE_URL", "http://localhost:8000"),
-		JWTSecret:           getEnv("JWT_SECRET", "mysecret")
+		JWTSecret:           getEnv("JWT_SECRET", "mysecret"),
 		TokenExpiry:         getEnv("TOKEN_EXPIRY", "24h"),
 		AllowedOrigins:      getEnv("ALLOWED_ORIGINS", "*"),
 	}
