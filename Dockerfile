@@ -9,7 +9,7 @@ COPY . .
 RUN rm -f go.mod go.sum
 
 # Initialize Go modules and download dependencies
-RUN go mod init github.com/yourusername/bookstore-api-gateway
+RUN go mod init github.com/nvrbckdown/bookstore-api-gateway
 RUN go get github.com/gin-gonic/gin
 RUN go get github.com/gin-contrib/cors@v1.4.0
 RUN go get github.com/joho/godotenv
