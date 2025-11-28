@@ -24,10 +24,6 @@ func main() {
 	// Initialize router
 	router := gin.New()
 
-	// Apply middleware
-	router.Use(gin.Recovery())
-	router.Use(middleware.Logger())
-
 	// Register routes
 	registerRoutes(router, cfg)
 
